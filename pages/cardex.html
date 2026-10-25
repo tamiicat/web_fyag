@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardex - FYAG</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../css/style-cardex.css">
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="../images/logo_fondo.png" alt="Logo FYAG" width="150px">
+                    </div>
+                    <div class="header-titles">
+                        <h2>Cardex</h2>
+                        <p class="subtitle">Registro de movimientos del inventario</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="panel-admin.html" class="btn-primary-action">
+                        <span class="btn-text">Volver al menú</span>
+                    </a>
+                    <a href="../index.html" class="btn-logout">
+                        <i class="fa-solid fa-sign-out-alt"></i>
+                        <span class="btn-text">Cerrar Sesión</span>
+                    </a>
+                </div>
+            </header>
+
+            <main class="dashboard-content inventario-layout">
+                
+                <div class="search-filters-section">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar por ID, nombre, categoría, ubicación..." id="search-input">
+                        <i class="fa-solid fa-search search-icon"></i>
+                    </div>
+                    
+                    <div class="filters-row">
+                        <div class="filter-select-wrapper">
+                            <select id="filter-categoria" class="filter-select">
+                                <option value="">Todas las categorías</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-select-wrapper">
+                            <select id="sort-by" class="filter-select">
+                                <option value="">Ordenar por</option>
+                            </select>
+                            <i class="fa-solid fa-sliders sort-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="inventario-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Código de Barras</th>
+                                <th>Stock Actual</th>
+                                <th>Stock Crítico</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>500</td>
+                                <td>Aire Acondicionado</td>
+                                <td>3498032853435</td>
+                                <td>25</td>
+                                <td>10</td>
+                                <td><span class="status-badge disponible">Disponible</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="action-footer">
+                    <a href="cardex-generado.html" class="btn-primary-action btn-large">Generar Cardex</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

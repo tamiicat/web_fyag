@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Inventario - FYAG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style-gestionar-inventario.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="inventory-card">
+
+            <header class="inventory-header">
+                <div class="header-left">
+                    <div class="logo">
+                        <img src="../images/logo_fondo.png" alt="Logo FYAG" width="150px" height="100px">
+                    </div>
+                    <div class="header-titles">
+                        <h2>Modificar</h2>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <a href="panel-admin.html" class="btn-menu">Volver al menú</a>
+                    <a href="../index.html" class="btn-logout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </header>
+            <main class="inventory-body">
+                <form id="formInventario">
+                    
+                    <div class="form-row grid-2-cols">
+                        <div class="form-group">
+                            <label for="nombreArticulo">Nombre Artículo</label>
+                            <input type="text" id="nombreArticulo" placeholder="Ej. Aire Acondicionado" value="Aire Acondicionado">
+                        </div>
+                        <div class="form-group">
+                            <label for="codigoBarras">Código de Barras</label>
+                            <input type="text" id="codigoBarras" placeholder="Ej. 1203429803421" value="3498032853435">
+                        </div>
+                    </div>
+
+                    <div class="form-row grid-2-cols">
+                        <div class="form-group">
+                            <label for="categoria">Categoría</label>
+                            <input type="text" id="categoria" placeholder="Ej. Climatización" value="Climatización">
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Precio</label>
+                            <input type="text" id="precio" placeholder="Ej. $690.990" value="$690.990">
+                        </div>
+                    </div>
+
+                    <div class="form-row grid-3-cols-uneven">
+                        <div class="form-group">
+                            <label for="ubicacion">Ubicación</label>
+                            <input type="text" id="ubicacion" placeholder="Ej. Bodega A - Repisa Izquierda" value="Bodega A – Repisa Izquierda">
+                        </div>
+                        <div class="form-group">
+                            <label for="stockActual">Stock Actual</label>
+                            <input type="number" id="stockActual" value="45">
+                        </div>
+                        <div class="form-group">
+                            <label for="stockCritico">Stock Crítico</label>
+                            <input type="number" id="stockCritico" value="10">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="articulo-modificado.html" type="submit" class="btn-save">Guardar Artículo</a>
+                    </div>
+                    
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
